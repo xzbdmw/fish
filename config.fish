@@ -53,7 +53,26 @@ function fzf-history
 end
 
 function fish_user_key_bindings
-    bind \cd backward-kill-word
+    bind --preset -M insert \cO complete-and-search
+    bind --preset -M insert \ca beginning-of-line
+    bind --preset -M insert \ce end-of-line
+    bind --preset -M insert \cd backward-kill-word
+    bind --preset -M insert \e\[105\;9u switchwindow
+    bind --preset -M insert \cb backward-word
+    bind --preset -M insert \cf forward-word
+end
+
+set -g fish_color_selection --background=d8e0e0
+set -g fish_color_search_match normal --background=C7D2F8
+set -g fish_color_autosuggestion 6d6b6b
+set fish_cursor_insert line
+set fish_cursor_normal block
+set fish_cursor_replace_one underscore
+set fish_cursor_replace underscore
+set fish_cursor_visual underscore
+set fish_cursor_external line
+
+function fish_mode_prompt
 end
 
 set -g fish_greeting ''
@@ -72,6 +91,7 @@ set -x CPPFLAGS "-I/opt/homebrew/opt/node@20/include"
 set -x LANG en_US.UTF-8
 set -x LC_ALL en_US.UTF-8
 set -x DYLD_LIBRARY_PATH /Users/xzb/Project/c/libgit2/build:$DYLD_LIBRARY_PATH
+set -x RUST_BACKTRACE 1
 set -x FLUTTER_STORAGE_BASE_URL https://storage.flutter-io.cn
 set -x HOMEBREW_NO_AUTO_UPDATE 1
 set -x MAVEN_HOME /opt/homebrew/Cellar/maven/3.8.1
@@ -91,7 +111,7 @@ set --export XDG_CONFIG_HOME "$HOME/.config"
 set -Ux EDITOR nvim
 set -U fish_escape_delay_ms 10
 
-fish_add_path /Users/xzb/Downloads/nvim-macos-arm64/bin/
+fish_add_path /Users/xzb/neovim/bin/
 fish_add_path -a /opt/homebrew/bin
 fish_add_path -a /opt/homebrew/opt/dart@2.12/bin
 fish_add_path -a /usr/local/go/bin
@@ -126,4 +146,3 @@ function z
     end
     rm -f -- "$tmp"
 end
-set fish_cursor_default line
