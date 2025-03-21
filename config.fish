@@ -65,12 +65,13 @@ end
 set -g fish_color_selection --background=d8e0e0
 set -g fish_color_search_match normal --background=C7D2F8
 set -g fish_color_autosuggestion 6d6b6b
+
 set fish_cursor_insert line
-set fish_cursor_normal block
+set fish_cursor_default block
+set fish_cursor_external line
 set fish_cursor_replace_one underscore
 set fish_cursor_replace underscore
 set fish_cursor_visual underscore
-set fish_cursor_external line
 
 function fish_mode_prompt
 end
@@ -137,8 +138,9 @@ fish_add_path -a /Users/xzb/Downloads/nacos/bin
 fish_add_path -a $JAVA_HOME/bin
 
 zoxide init --cmd j fish | source
+alias z=__zoxide_zi
 
-function z
+function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
     yazi $argv --cwd-file="$tmp"
     if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
