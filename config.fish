@@ -1,5 +1,7 @@
 launchctl setenv NEOVIDE_FORK 0
 alias python='/usr/bin/python3'
+alias la=lazygit
+alias ld=lazydocker
 alias ls='exa -l --icons --grid'
 set -g theme_color_scheme base16-light
 function time_link
@@ -53,13 +55,14 @@ function fzf-history
 end
 
 function fish_user_key_bindings
-    bind --preset -M insert \cO complete-and-search
-    bind --preset -M insert \ca beginning-of-line
-    bind --preset -M insert \ce end-of-line
-    bind --preset -M insert \cd backward-kill-word
-    bind --preset -M insert \e\[105\;9u switchwindow
-    bind --preset -M insert \cb backward-word
-    bind --preset -M insert \cf forward-word
+    bind --preset \cO complete-and-search
+    bind --preset \ca beginning-of-line
+    bind --preset \ce end-of-line
+    bind --preset \cd backward-kill-word
+    bind --preset \e\[105\;9u switchwindow
+    bind --preset \cb backward-word
+    bind --preset \cf forward-word
+    bind --preset \cx edit_command_buffer # Ctrl+E 直接触发
 end
 
 set -g fish_color_selection --background=d8e0e0
@@ -85,7 +88,6 @@ set -g chain_link_open_glyph '<'
 set -g chain_link_close_glyph '>'
 
 export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
-
 set -x PUB_HOSTED_URL https://pub.flutter-io.cn
 set -x LDFLAGS "-L/opt/homebrew/opt/node@20/lib"
 set -x CPPFLAGS "-I/opt/homebrew/opt/node@20/include"
@@ -109,13 +111,15 @@ set -Ux GIT_EDITOR true
 set -Ux LS_COLORS ""
 set -Ux HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK false
 set --export XDG_CONFIG_HOME "$HOME/.config"
-set -Ux EDITOR nvim
+set -Ux EDITOR nvim -u ~/.config/nvim/shell.vim
 set -U fish_escape_delay_ms 10
 
+fish_add_path /usr/local/go/bin
+# fish_add_path /Users/xzb/Project/go/go/bin
 fish_add_path /Users/xzb/neovim/bin/
+fish_add_path /opt/homebrew/opt/postgresql@17/bin
 fish_add_path -a /opt/homebrew/bin
 fish_add_path -a /opt/homebrew/opt/dart@2.12/bin
-fish_add_path -a /usr/local/go/bin
 fish_add_path -a /Users/xzb/Downloads/apache-maven-3.9.5/bin
 fish_add_path -a /Applications/Postgres.app/Contents/Versions/15/bin
 fish_add_path -a /Users/xzb/.local/bin
@@ -148,3 +152,13 @@ function y
     end
     rm -f -- "$tmp"
 end
+
+# # Added by OrbStack: command-line tools and integration
+# # This won't be added again if you remove it.
+# source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+#
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#if test -f /opt/homebrew/Caskroom/miniconda/base/bin/conda
+#eval /opt/homebrew/Caskroom/miniconda/base/bin/conda "shell.fish" hook $argv | source
+#end

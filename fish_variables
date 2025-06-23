@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export BAT_THEME:GitHub
-SETUVAR --export EDITOR:nvim
+SETUVAR --export EDITOR:nvim\x1e\x2du\x1e/Users/xzb/\x2econfig/nvim/shell\x2evim
 SETUVAR --export EMMYLUA_LS_RESOURCES:/Users/xzb/Project/Rust/emmylua\x2danalyzer\x2drust/resources
 SETUVAR --export FZF_DEFAULT_OPENER:nvim
 SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dheight\x20\x7e50\x25\x20\x2d\x2dlayout\x3dreverse\x20\x2d\x2dborder\x20\x20\x20\x20\x20\x2d\x2dcolor\x3dinfo\x3a\x237E7D7D\x2chl\x3a\x23D0577A\x3abold\x2chl\x2b\x3a\x23D0577A\x3abold\x2cfg\x3a\x23000000\x2cfg\x2b\x3a\x23000000\x2cbg\x2b\x3a\x23ECE8DA\x2cgutter\x3a\x23FBF7E6
@@ -46,7 +46,7 @@ SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
 SETUVAR fish_escape_delay_ms:10
-SETUVAR fish_key_bindings:fish_vi_key_bindings
+SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_background:\x1d
 SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D
@@ -60,4 +60,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR --export fish_user_paths:/Users/xzb/neovim/bin\x1e/Users/xzb/Downloads/nvim\x2dmacos\x2darm64/bin\x1e/opt/homebrew/opt/icu4c\x4074/bin\x1e/opt/homebrew/opt/openjdk\x4017/bin\x1e/opt/homebrew/bin\x1e/opt/homebrew/opt/dart\x402\x2e12/bin\x1e/usr/local/go/bin\x1e/Users/xzb/Downloads/apache\x2dmaven\x2d3\x2e9\x2e5/bin\x1e/Applications/Postgres\x2eapp/Contents/Versions/15/bin\x1e/Users/xzb/\x2elocal/bin\x1e/Users/xzb/\x2elocal/share/nvim/mason/bin\x1e/Users/xzb/Downloads/apache\x2djmeter\x2d5\x2e2\x2e1/bin\x1e/opt/homebrew/opt/node\x4020/bin\x1e/Users/xzb/go/bin\x1e/Users/xzb/\x2ecargo/bin\x1e/Users/xzb/Downloads/node\x2dv12\x2e18\x2e2\x2ddarwin\x2dx64/bin
+SETUVAR --export fish_user_paths:/opt/homebrew/opt/postgresql\x4017/bin\x1e/opt/homebrew/opt/libpq/bin\x1e/Users/xzb/Project/go/go/bin\x1e/Users/xzb/neovim/bin\x1e/Users/xzb/Downloads/nvim\x2dmacos\x2darm64/bin\x1e/opt/homebrew/opt/icu4c\x4074/bin\x1e/opt/homebrew/opt/openjdk\x4017/bin\x1e/opt/homebrew/bin\x1e/opt/homebrew/opt/dart\x402\x2e12/bin\x1e/usr/local/go/bin\x1e/Users/xzb/Downloads/apache\x2dmaven\x2d3\x2e9\x2e5/bin\x1e/Applications/Postgres\x2eapp/Contents/Versions/15/bin\x1e/Users/xzb/\x2elocal/bin\x1e/Users/xzb/\x2elocal/share/nvim/mason/bin\x1e/Users/xzb/Downloads/apache\x2djmeter\x2d5\x2e2\x2e1/bin\x1e/opt/homebrew/opt/node\x4020/bin\x1e/Users/xzb/go/bin\x1e/Users/xzb/\x2ecargo/bin\x1e/Users/xzb/Downloads/node\x2dv12\x2e18\x2e2\x2ddarwin\x2dx64/bin
